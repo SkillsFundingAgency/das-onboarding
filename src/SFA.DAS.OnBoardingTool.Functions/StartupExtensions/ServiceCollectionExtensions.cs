@@ -7,6 +7,8 @@ using SFA.DAS.OnBoardingTool.Infrastructure.Validators;
 using SFA.DAS.OnBoardingTool.Infrastructure.Api;
 using SFA.DAS.OnBoardingTool.Infrastructure.Api.Atlassian;
 using FluentValidation;
+using NLog.Extensions.Logging;
+using SFA.DAS.OnBoardingTool.Functions.Configuration;
 
 namespace SFA.DAS.OnBoardingTool.Functions.StartupExtensions
 {
@@ -19,6 +21,25 @@ namespace SFA.DAS.OnBoardingTool.Functions.StartupExtensions
             services.AddTransient<AbstractValidator<Value>, ValueValidator>();
 
             return services;
+        }
+
+        public static IServiceCollection AddNLog(this IServiceCollection serviceCollection)
+        {
+            serviceCollection.AddLogging((options) =>
+            {
+                options.AddFilter(typeof(Startup).Namespace, LogLevel.Information);
+                options.SetMinimumLevel(LogLevel.Trace);
+                options.AddNLog(new NLogProviderOptions
+                {
+                    CaptureMessageTemplates = true,
+                    CaptureMessageProperties = true
+                });
+                options.AddConsole();
+
+                NLogConfiguration.ConfigureNLog();
+            });
+
+            return serviceCollection;
         }
     }
 }

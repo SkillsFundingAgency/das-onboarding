@@ -16,7 +16,7 @@ namespace SFA.DAS.OnBoardingTool.Functions
         }
 
         [FunctionName("RevokeAtlassianUsers")]
-        public async Task Run([TimerTrigger("%RevokeUserTimerSchedule%")]TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("%RevokeUserTimerSchedule%")]TimerInfo timer, ILogger log)
         {
             log.LogInformation($"Revoke Users C# Timer trigger function executed at: {DateTime.Now}");
 

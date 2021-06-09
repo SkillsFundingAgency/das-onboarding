@@ -15,6 +15,8 @@ namespace SFA.DAS.OnBoardingTool.Functions
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
+            builder.Services.AddNLog();
+
             var serviceProvider = builder.Services.BuildServiceProvider();
             var configuration = serviceProvider.GetRequiredService<IConfiguration>();
 
@@ -37,7 +39,7 @@ namespace SFA.DAS.OnBoardingTool.Functions
 
             var config = configBuilder.Build();
             builder.Services.Replace(ServiceDescriptor.Singleton(typeof(IConfiguration), config));
-
+            
             builder.Services.AddOptions();
             builder.Services.Configure<OnBoardingToolFunctions>(config.GetSection("OnBoardingToolFunctions"));
             builder.Services.Configure<AtlassianApi>(config.GetSection("AtlassianApi"));
