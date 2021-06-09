@@ -46,7 +46,7 @@ namespace SFA.DAS.OnBoardingTool.Infrastructure.Validators
                 ;
 
                 RuleFor(value => value.Fields.DueDate)                    
-                    .Must(dueDate => (string.IsNullOrEmpty(dueDate) ? DateTime.Now : DateTime.Parse(dueDate)).Date == DateTime.Now.Date)
+                    .Must(dueDate => (string.IsNullOrEmpty(dueDate) ? DateTime.Now : DateTime.Parse(dueDate)).Date <= DateTime.Now.Date)
                     .WithMessage("The due date is in the future")
                 ;
         }

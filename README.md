@@ -1,26 +1,40 @@
-# das-github-template
+# Apprenticeship Service Onboarding Utility
 
-This repo should be used as a template when creating new repos for the Apprenticeship Service
+This project contains Azure functions that will create and delete users in the ESFA Atlassian instance from requests raised in the Demand Management Jira Service Desk project.
 
-## Contents
+## Getting Started
 
-* .github/CODEOWNERS - Defines required approvals for changes to files specified in the CODEOWNERS file
-* azure/template.json - Azure ARM template should be used to provision resources on the Azure platform
-* .gitignore - Intialised for Visual Studio
-* azure-pipelines.yml - Azure Pipelines definition file
-* GitVersion.yml - GitVersion configuration file
-* LICENSE - License information file
-* README.md - Populate with useful information about the repo, the projects it contains and how to get started.
-# ProjectName
+* Clone this repository
+* Get the latest config from the das-config repository and ensure it is available in the Storage Emulator with a partition key of "LOCAL" and a RowKey of "SFA.DAS.OnBoardingTool.Functions_1.0"
+* Set the SFA.DAS.OnBoardingTool.Functions project as the startup project
+* Set local.settings.json as follows:
 
-## Introduction
+```
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopment=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",    
+    "ConfigNames": "SFA.DAS.OnBoardingTool.Functions",
+    "ConfigurationStorageConnectionString": "UseDevelopment=true",
+    "Environment": "LOCAL"
+  }  
+}
+```
 
-An introduction to the project goes here!
+### Prerequisites
 
-## Developer Setup
+* An IDE capable of editing and running Azure Functions
+* An API key for an Atlassian Jira instance
 
-### Requirements
+## Testing
 
-### Setup
+Tests are available in the SFA.DAS.OnBoardingTool.Tests project. A TestHarness console app is also available to allow testing without having to rely on the Functions
 
-### Config
+## Known Issues
+
+There are currently no known issues
+
+## License
+
+This project is distributed under the MIT License

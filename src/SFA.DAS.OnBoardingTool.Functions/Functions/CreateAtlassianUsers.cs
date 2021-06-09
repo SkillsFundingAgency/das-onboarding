@@ -16,7 +16,7 @@ namespace SFA.DAS.OnBoardingTool.Functions
         }
 
         [FunctionName("CreateAtlassianUsers")]
-        public async Task Run([TimerTrigger("%CreateUserTimerSchedule%")]TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("%CreateUserTimerSchedule%")]TimerInfo timer, ILogger log)
         {
             log.LogInformation($"Create Users C# Timer trigger function executed at: {DateTime.Now}");
 
