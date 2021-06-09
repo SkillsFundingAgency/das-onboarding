@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>SFA.DAS.OnBoardingTool.TestHarness</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.14" />
+    <PackageReference Include="SFA.DAS.Configuration.AzureTableStorage" Version="3.0.84" />
+  </ItemGroup>
+   <ItemGroup>
+    <ProjectReference Include="..\SFA.DAS.OnBoardingTool.Application\SFA.DAS.OnBoardingTool.Application.csproj" />
+    <ProjectReference Include="..\SFA.DAS.OnBoardingTool.Infrastructure\SFA.DAS.OnBoardingTool.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
