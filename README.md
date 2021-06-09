@@ -5,7 +5,7 @@ This project contains Azure functions that will create and delete users in the E
 ## Getting Started
 
 * Clone this repository
-* Get the latest config from the das-config repository and ensure it is available in the Storage Emulator with a partition key of "LOCAL" and a RowKey of "SFA.DAS.OnBoardingTool.Functions_1.0"
+* Get the latest config from the [das-employer-config](https://github.com/SkillsFundingAgency/das-employer-config) repository and ensure it is available in the Azure Storage Emulator with a partition key of "LOCAL" and a RowKey of "SFA.DAS.OnBoardingTool.Functions_1.0"
 * Set the SFA.DAS.OnBoardingTool.Functions project as the startup project
 * Set local.settings.json as follows:
 
@@ -18,12 +18,13 @@ This project contains Azure functions that will create and delete users in the E
     "ConfigNames": "SFA.DAS.OnBoardingTool.Functions",
     "ConfigurationStorageConnectionString": "UseDevelopment=true",
     "Environment": "LOCAL"
-  }  
+  }
 }
 ```
 
 ### Prerequisites
 
+* An understanding of the [das-employer-config](https://github.com/SkillsFundingAgency/das-employer-config) pattern
 * An IDE capable of editing and running Azure Functions
 * An API key for an Atlassian Jira instance
 * Azure Functions tools
