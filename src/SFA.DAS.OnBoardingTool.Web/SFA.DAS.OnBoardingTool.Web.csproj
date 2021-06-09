@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\SFA.DAS.OnBoardingTool.Application\SFA.DAS.OnBoardingTool.Application.csproj" />
+    <ProjectReference Include="..\SFA.DAS.OnBoardingTool.Domain\SFA.DAS.OnBoardingTool.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>
