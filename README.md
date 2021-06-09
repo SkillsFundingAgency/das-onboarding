@@ -26,6 +26,7 @@ This project contains Azure functions that will create and delete users in the E
 
 * An IDE capable of editing and running Azure Functions
 * An API key for an Atlassian Jira instance
+* Azure Functions tools
 
 ## Testing
 
@@ -37,4 +38,4 @@ There are currently no known issues
 
 ## License
 
-This project is distributed under the MIT License
+This project is distributed under the [MIT License](https://github.com/SkillsFundingAgency/das-onboarding/blob/main/LICENSE)
