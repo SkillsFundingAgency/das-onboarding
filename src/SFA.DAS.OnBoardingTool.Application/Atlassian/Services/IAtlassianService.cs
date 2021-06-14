@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using SFA.DAS.OnBoardingTool.Domain;
 using SFA.DAS.OnBoardingTool.Infrastructure.Api.Atlassian;
+using SFA.DAS.OnBoardingTool.Infrastructure.Models;
 
 namespace SFA.DAS.OnBoardingTool.Application
 {

@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using FluentValidation;
 using Microsoft.Extensions.Options;
-using SFA.DAS.OnBoardingTool.Infrastructure.Api.Atlassian;
 using SFA.DAS.OnBoardingTool.Infrastructure.Configuration;
+using SFA.DAS.OnBoardingTool.Infrastructure.Models;
 
 namespace SFA.DAS.OnBoardingTool.Infrastructure.Validators
 {    

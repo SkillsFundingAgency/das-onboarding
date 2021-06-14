@@ -9,6 +9,7 @@ using SFA.DAS.OnBoardingTool.Infrastructure.Api.Atlassian;
 using FluentValidation;
 using NLog.Extensions.Logging;
 using SFA.DAS.OnBoardingTool.Functions.Configuration;
+using SFA.DAS.OnBoardingTool.Infrastructure.Models;
 
 namespace SFA.DAS.OnBoardingTool.Functions.StartupExtensions
 {

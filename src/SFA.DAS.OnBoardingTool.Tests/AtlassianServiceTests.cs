@@ -13,6 +13,7 @@ using System.Net.Http;
 using System;
 using FluentValidation;
 using SFA.DAS.OnBoardingTool.Infrastructure.Validators;
+using SFA.DAS.OnBoardingTool.Infrastructure.Models;
 
 namespace SFA.DAS.OnBoardingTool.Tests
 {

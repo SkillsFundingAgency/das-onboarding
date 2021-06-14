@@ -14,6 +14,7 @@ using SFA.DAS.OnBoardingTool.Infrastructure.Configuration;
 using Microsoft.Extensions.Options;
 using FluentValidation;
 using SFA.DAS.OnBoardingTool.Infrastructure.Validators;
+using SFA.DAS.OnBoardingTool.Infrastructure.Models;
 
 namespace SFA.DAS.OnBoardingTool.Application.Atlassian
 {

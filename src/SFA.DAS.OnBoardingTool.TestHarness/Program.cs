@@ -10,6 +10,7 @@ using SFA.DAS.OnBoardingTool.Application.Atlassian;
 using SFA.DAS.OnBoardingTool.Infrastructure.Api;
 using SFA.DAS.OnBoardingTool.Infrastructure.Api.Atlassian;
 using SFA.DAS.OnBoardingTool.Infrastructure.Configuration;
+using SFA.DAS.OnBoardingTool.Infrastructure.Models;
 using SFA.DAS.OnBoardingTool.Infrastructure.Validators;
 
 namespace SFA.DAS.OnBoardingTool.TestHarness
