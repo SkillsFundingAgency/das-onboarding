@@ -38,6 +38,8 @@ local.settings.json file
 {
   "IsEncrypted": false,
   "Values": {
+    "CreateUserTimerSchedule": "*/30 * * * * *",
+    "RevokeUserTimerSchedule": "*/30 * * * * *",
     "AzureWebJobsStorage": "UseDevelopment=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",    
     "ConfigNames": "SFA.DAS.OnBoardingTool.Functions",
