@@ -150,8 +150,9 @@ namespace SFA.DAS.OnBoardingTool.Application.Atlassian
             {
                 await _apiClient.CreateUser(user);
             }
-            catch (System.Exception)
+            catch (Exception ex)
             {
+                _log.LogError(ex, "Could not create user");
                 return (request.Key, false);
             }
 
