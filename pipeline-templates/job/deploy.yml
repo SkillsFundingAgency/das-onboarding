@@ -19,7 +19,6 @@ jobs:
             Environment: ${{ parameters.Environment }}
             TemplatePath: $(Pipeline.Workspace)/OnboardingFunctions/azure/template.json
             ParametersPath: $(Pipeline.Workspace)/OnboardingFunctions/azure/template.parameters.json
-            IsMultiRepoCheckout: true
             TemplateSecrets:
               LoggingRedisConnectionString: $(LoggingRedisConnectionString)
               ConfigurationStorageConnectionString: $(ConfigurationStorageConnectionString)
