@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SFA.DAS.OnBoardingTool.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SFA.DAS.OnBoardingTool.Tests", "SFA.DAS.OnBoardingTool.Tests\SFA.DAS.OnBoardingTool.Tests.csproj", "{71F585A9-6537-4416-A3FC-61C345F498E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SFA.DAS.OnBoardingTool.Web", "SFA.DAS.OnBoardingTool.Web\SFA.DAS.OnBoardingTool.Web.csproj", "{B733FE21-72BD-4175-B407-823F8A0254F5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{BEAE9168-2915-4C53-B352-2A1670F3F806}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
@@ -104,18 +102,6 @@ Global
 		{71F585A9-6537-4416-A3FC-61C345F498E2}.Release|x64.Build.0 = Release|Any CPU
 		{71F585A9-6537-4416-A3FC-61C345F498E2}.Release|x86.ActiveCfg = Release|Any CPU
 		{71F585A9-6537-4416-A3FC-61C345F498E2}.Release|x86.Build.0 = Release|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Debug|x64.Build.0 = Debug|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Debug|x86.Build.0 = Debug|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Release|x64.ActiveCfg = Release|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Release|x64.Build.0 = Release|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Release|x86.ActiveCfg = Release|Any CPU
-		{B733FE21-72BD-4175-B407-823F8A0254F5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
