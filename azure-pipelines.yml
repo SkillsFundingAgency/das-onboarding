@@ -40,14 +40,14 @@ stages:
     parameters:
       SolutionBaseName: $(SolutionBaseName)
 
-- stage: Deploy_AT
+- stage: Deploy_PRD
   dependsOn: Build
-  displayName: Deploy to AT
+  displayName: Deploy to PRD
   variables:
-  - group: DevTest Management Resources
-  - group: AT DevTest Shared Resources
+  - group: Prod Management Resources
+  - group: Prod Shared Resources
   jobs:
   - template: pipeline-templates/job/deploy.yml
     parameters:
-      Environment: AT
-      ServiceConnection: SFA-DAS-DevTest-ARM
+      Environment: PROD
+      ServiceConnection: SFA-DIG-Prod-ARM
