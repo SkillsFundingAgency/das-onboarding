@@ -57,6 +57,10 @@
         },
         "configNames": {
             "type": "string"
+        },
+        "utcValue": {
+            "type": "string",
+            "defaultValue": "[utcNow()]"
         }
     },
     "variables": {
@@ -77,7 +81,7 @@
         },
         {
             "apiVersion": "2020-10-01",
-            "name": "function-app-subnet",
+            "name": "[concat(parameters('subnetObject').name, '-', parameters('utcValue'))]",
             "type": "Microsoft.Resources/deployments",
             "resourceGroup": "[parameters('sharedEnvResourceGroup')]",
             "properties": {
@@ -110,7 +114,7 @@
         },
         {
             "apiVersion": "2020-10-01",
-            "name": "app-service-plan",
+            "name": "[concat(variables('appServicePlanName'), '-', parameters('utcValue'))]",
             "type": "Microsoft.Resources/deployments",
             "resourceGroup": "[variables('resourceGroupName')]",
             "properties": {
@@ -137,7 +141,7 @@
         },
         {
             "apiVersion": "2020-10-01",
-            "name": "application-insights",
+            "name": "[concat(variables('functionAppName'), '-application-insights-', parameters('utcValue'))]",
             "type": "Microsoft.Resources/deployments",
             "resourceGroup": "[variables('resourceGroupName')]",
             "properties": {
@@ -161,7 +165,7 @@
         },
         {
             "apiVersion": "2020-10-01",
-            "name": "function-app",
+            "name": "[concat(variables('functionAppName'), '-', parameters('utcValue'))]",
             "type": "Microsoft.Resources/deployments",
             "resourceGroup": "[variables('resourceGroupName')]",
             "properties": {
@@ -181,7 +185,7 @@
                         "value": "[variables('resourceGroupName')]"
                     },
                     "subnetResourceId": {
-                        "value": "[reference('function-app-subnet').outputs.SubnetResourceId.value]"
+                        "value": "[reference(concat(parameters('subnetObject').name, parameters('utcValue'))).outputs.SubnetResourceId.value]"
                     },
                     "functionAppAppSettings": {
                         "value": {
@@ -204,7 +208,7 @@
                                 },
                                 {
                                     "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
-                                    "value": "[reference('application-insights').outputs.InstrumentationKey.value]"
+                                    "value": "[reference(concat(variables('functionAppName'), '-application-insights-', parameters('utcValue'))).outputs.InstrumentationKey.value]"
                                 },
                                 {
                                     "name": "AzureWebJobsStorage",
@@ -240,7 +244,7 @@
             },
             "dependsOn": [
                 "[variables('resourceGroupName')]",
-                "app-service-plan"
+                "[concat(variables('appServicePlanName'), '-', parameters('utcValue'))]"
             ]
         }
     ],
